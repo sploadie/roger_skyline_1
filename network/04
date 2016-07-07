@@ -1,0 +1,4 @@
+netstat -r;
+echo "";
+echo "Grepping default..."
+echo "Default:" `netstat -r | grep default`
