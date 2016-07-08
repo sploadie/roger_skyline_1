@@ -1,0 +1,3 @@
+echo "" >> /etc/crontab
+echo "0 4 * * 1 /root/02" >> /etc/crontab
+
