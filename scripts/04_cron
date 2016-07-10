@@ -1,0 +1,14 @@
+#!/bin/bash
+RELATIVE_FILE="./04"
+EXEC_FILE="/root/04"
+CRON_FILE="/etc/cron.d/04cron"
+
+if [ "$USER" != "root" ]; then
+	echo "Must be root!"
+	exit 1
+fi
+
+cp "$RELATIVE_FILE" "$EXEC_FILE"
+chmod 755 "$EXEC_FILE"
+echo "0 0 * * * root $EXEC_FILE" > "$CRON_FILE"
+chmod 644 "$CRON_FILE"

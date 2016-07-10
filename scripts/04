@@ -1,0 +1,13 @@
+#!/bin/bash
+FILE="/root/crontab_state.txt"
+STATE=`ls -l /etc/crontab`
+
+if [ -a $FILE ]; then
+	$STATE > $FILE
+	exit
+fi
+if [ -z `diff $FILE $STATE` ]; then
+	exit
+fi
+DATE=`echo "$STATE" | cut -d' ' -f6-9`
+echo "File /etc/crontab was modified @ $DATE" | mail -s "CRONTAB MODIFIED" root
