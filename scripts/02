@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "apt-get update -y && apt-get upgrade -y 1>/var/log/update_script.log 2>/var/log/update_script.log" /root/02
+echo "apt-get update -y && apt-get upgrade -y 1>/var/log/update_script.log 2>/var/log/update_script.log" > /root/02
 chmod 755 /root/02
 echo "" >> /etc/crontab
 echo "0 4 * * 1 /root/02" >> /etc/crontab
