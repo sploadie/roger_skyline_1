@@ -1,2 +1,2 @@
 #!/bin/sh
-apt-get update -y && apt-get upgrade -y 1>/var/log/update_script.log 2>/var/log/update_script.log
+apt-get update -y 1>/var/log/update_script.log 2>/var/log/update_script.log && apt-get upgrade -y 1>/var/log/update_script.log 2>/var/log/update_script.log

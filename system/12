@@ -2,10 +2,10 @@
 1.9M	/var/backups
 4.0K	/var/opt
 4.0K	/var/mail
-16M		/var/cache
-82M		/var/lib
+16M 	/var/cache
+82M 	/var/lib
 100K	/var/tmp
-80K		/var/spool
+80K 	/var/spool
 4.0K	/var/local
-20M		/var/log
+20M 	/var/log
 119M	/var
